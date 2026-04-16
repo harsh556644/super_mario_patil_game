@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Super Mario Patil</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-width: 100vw;
+      padding: 20px 10px;
+      background: url(Content/boss.png) center/cover no-repeat;
+      background-size: cover;
+      font-family: 'Press Start 2P', cursive;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      text-shadow: 3px 3px black;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    .box {
+      width: min(460px, 90vw);
+      margin-bottom: 40px;
+      background: rgba(0,0,0,0.75);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    input, button {
+      width: 100%;
+      max-width: 440px;
+      margin-top: 10px;
+      padding: 12px 14px;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Press Start 2P';
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+  
+    button {
+      width: 100%;
+    }
+
+    button {
+      background: yellow;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>SUPER MARIO PATIL</h1>
+<h1>aja khel lee</h1>
+
+<div class="box">
+  <p>Solve this to start(wrong ans only ):</p>
+  <p id="question"></p>
+
+  <input type="number" id="answer" placeholder="Answer">
+  <br>
+  <button onclick="check()">Submit</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+let a = Math.floor(Math.random()*10)+1;
+let b = Math.floor(Math.random()*10)+1;
+let correct = a + b;
+
+document.getElementById("question").innerText = a + " + " + b + " = ?";
+
+function check() {
+  let user = parseInt(document.getElementById("answer").value);
+
+  if(user === correct){
+    document.getElementById("result").innerText = "❌ Correct not allowed 😈";
+  } else {
+    document.getElementById("result").innerText = "🚀 Starting Game...";
+    
+    setTimeout(()=>{
+      window.location.href = "index.html"; // redirect
+    }, 800);
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Super Mario HTML5 Test</title>
+<link href="Content/style.css" rel="stylesheet" />
+<link href="Content/endOverlay.css" rel="stylesheet" />
+</head>
+<body>
+<div id="game">
+<div id="world">
+</div>
+<div id="coinNumber" class="gauge">0</div>
+<div id="coin" class="gaugeSprite"></div>
+<div id="liveNumber" class="gauge">0</div>
+<div id="live" class="gaugeSprite"></div>
+<div id="touch-controls">
+  <div class="touch-group touch-left-right">
+    <button class="touch-btn touch-left" data-action="left" aria-label="Move left">◀</button>
+    <button class="touch-btn touch-right" data-action="right" aria-label="Move right">▶</button>
+  </div>
+  <div class="touch-group touch-actions">
+    <button class="touch-btn touch-jump" data-action="up" aria-label="Jump">▲</button>
+    <button class="touch-btn touch-accelerate" data-action="accelerate" aria-label="Run">A</button>
+  </div>
+</div>
+<!-- End game overlay for victory or game over -->
+<div id="endOverlay">
+  <div id="overlayCard">
+    <div id="overlayMessage"></div>
+    <img id="endImage" src="" alt="End Image" />
+    <video id="overlayVideo" controls playsinline></video>
+    <button id="overlayActionButton" type="button"></button>
+  </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="Scripts/testlevels.js"></script>
+<script src="Scripts/oop.js"></script>
+<script src="Scripts/keys.js"></script>
+<script src="Scripts/constants.js"></script>
+<script src="Scripts/main.js"></script>
+<script src="Scripts/endOverlay.js"></script>
+</body>
+</html>
