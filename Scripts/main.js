@@ -1,4 +1,4 @@
-/*
+﻿/*
  * *****
  * WRITTEN BY FLORIAN RAPPL, 2012.
  * florian-rappl.de
@@ -1953,6 +1953,7 @@ $(document).ready(function() {
 	window.activeLevel = level;
 	level.load(definedLevels[0]);
 	level.start();
-	keys.bind();
-	keys.bindTouch();
+keys.reset();
+keys.bind();
+keys.bindTouch();
 });
